@@ -49,7 +49,7 @@ This repo includes a Render Blueprint in `render.yaml` for:
 - a Node API service
 - a static frontend site
 
-In Render, create a new Blueprint from this repository. Set the API `DATABASE_URL` to your Supabase session pooler connection string, and the API service runs the existing database schema before startup with `npm run migrate -w @recipe-finder/api`.
+In Render, create a new Blueprint from this repository. Set the API `DATABASE_URL` to your Supabase session pooler connection string, then set `FRONTEND_ORIGIN` and `VITE_API_BASE` to your deployed service URLs. The API service runs the existing database schema before startup with `npm run migrate -w @recipe-finder/api`.
 
 The default service names produce these URLs:
 
