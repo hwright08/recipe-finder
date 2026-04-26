@@ -1,0 +1,20 @@
+{
+  "name": "@recipe-finder/api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nitro dev --host 0.0.0.0 --port 3001",
+    "build": "nitro build",
+    "start": "node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "h3": "^1.13.0",
+    "nitropack": "^2.11.7",
+    "pg-promise": "^12.6.2",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^5.7.3"
+  }
+}

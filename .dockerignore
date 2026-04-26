@@ -1,0 +1,9 @@
+node_modules/
+apps/*/node_modules/
+.output/
+apps/*/.output/
+dist/
+apps/*/dist/
+.git/
+.env
+*.log

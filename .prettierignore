@@ -1,0 +1,8 @@
+node_modules
+
+apps/**/dist
+apps/api/.nitro
+apps/api/.output
+apps/web/tsconfig.tsbuildinfo
+
+package-lock.json
