@@ -38,6 +38,26 @@ The production Compose file:
 
 Use a reverse proxy or load balancer in front of the `web` service for TLS termination.
 
+## Deploy To Render
+
+This repo includes a Render Blueprint in `render.yaml` for:
+
+- a managed Postgres database
+- a Node API service
+- a static frontend site
+
+In Render, create a new Blueprint from this repository. The API service runs the existing database schema before startup with `npm run migrate -w @recipe-finder/api`.
+
+The default service names produce these URLs:
+
+- API: `https://recipe-finder-api.onrender.com`
+- Web: `https://recipe-finder-web.onrender.com`
+
+If you rename either service, update these environment variables in Render:
+
+- API `FRONTEND_ORIGIN` must match the web site origin.
+- Web `VITE_API_BASE` must be the API URL with `/api` appended.
+
 ## Local Development Without Docker
 
 ```sh
