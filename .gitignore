@@ -7,6 +7,7 @@ dist/
 .env.*
 !.env.example
 !.env.production.example
+!.env.supabase.example
 *.log
 postgres-data/
 *.tsbuildinfo

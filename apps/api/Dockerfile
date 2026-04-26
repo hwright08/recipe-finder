@@ -20,6 +20,9 @@ FROM node:22-alpine AS prod
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=build /app/apps/api/.output ./.output
+COPY --from=build /app/apps/api/scripts ./scripts
+COPY --from=build /app/db ./db
+COPY --from=build /app/node_modules ./node_modules
 EXPOSE 3001
 USER node
 CMD ["node", ".output/server/index.mjs"]
