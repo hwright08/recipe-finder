@@ -64,7 +64,7 @@ export async function listRecipes(user: AuthUser): Promise<Recipe[]> {
       LEFT JOIN food_items ON food_items.id = recipe_food_items.food_item_id
       WHERE recipes.user_id = $[userId]
       GROUP BY recipes.id, users.id, users.display_name
-      ORDER BY recipes.created_at DESC`,
+      ORDER BY recipes.title DESC`,
     { userId }
   );
 
